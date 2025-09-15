@@ -125,13 +125,13 @@ var create_new_password_dialog = function(frm, is_new) {
 				generate_password(frm, d);
 			}
 		},
-		{ fieldtype: 'Data', reqd: 1, fieldname: 'new_password', label: 'New Password'},
+		{ fieldtype: 'Data', reqd: 1, fieldname: 'new_password', label: 'New Password', length: 500 },
 		{ fieldtype: 'Check', reqd: 1, fieldname: 'make_sure_password_copied', label: 'Make sure the password is copied'}
 	];
 	var fields = [];
 	var primary_action_label = 'Set Password';
 	if(!is_new){
-		fields = [{ fieldtype: 'Password', reqd: 1, fieldname: 'password', label: 'Password'}];
+		fields = [{ fieldtype: 'Password', reqd: 1, fieldname: 'password', label: 'Password', length: 500 }];
 		primary_action_label = 'Update Password';
 	}
 	fields = fields.concat(common_fields)
